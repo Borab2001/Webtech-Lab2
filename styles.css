@@ -56,3 +56,7 @@ input {
 input[type="submit"] {
     margin-top: 1.5rem;
 }
+
+input:focus {
+    background-color: #fff;
+}
