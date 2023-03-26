@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>City Name Autocomplete</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+      $(function() {
+        var availableCities = [
+          "New York",
+          "Los Angeles",
+          "Chicago",
+          "Houston",
+          "Phoenix",
+          "Philadelphia",
+          "San Antonio",
+          "San Diego",
+          "Dallas",
+          "San Jose",
+          "Austin",
+          "Jacksonville",
+          "Fort Worth",
+          "Columbus",
+          "San Francisco",
+          "Charlotte",
+          "Indianapolis",
+          "Seattle",
+          "Denver",
+          "Washington"
+        ];
+        $("#city").autocomplete({
+          source: availableCities
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <label for="city">Enter a city name: </label>
+    <input type="text" id="city">
+  </body>
+</html>
