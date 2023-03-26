@@ -28,3 +28,33 @@ function validateMyForm() {
 
   return true;
 }
+
+
+function toggleFM() {
+  const fieldsets = document.querySelectorAll("fieldset");
+
+  fieldsets.forEach(function(fieldset) {
+    const legend = fieldset.querySelector("legend");
+    const inputs = document.querySelectorAll("input");
+
+    if (document.getElementById("female").checked) {
+      // Female is selected
+      fieldset.style.borderColor = "var(--blue)";
+      legend.style.color = "var(--blue)";
+      inputs.forEach(function(input) {
+        input.style.borderColor = "var(--blue)";
+        input.style.backgroundColor = "var(--blue-lower)";
+      });
+      document.querySelector("h1").textContent = "Hello Madam";
+    } else {
+      // Male is selected
+      fieldset.style.borderColor = "var(--red)";
+      legend.style.color = "var(--red)";
+      inputs.forEach(function(input) {
+        input.style.borderColor = "var(--red)";
+        input.style.backgroundColor = "var(--red-lower)";
+      });
+      document.querySelector("h1").textContent = "Hello Sir";
+    }
+  });
+}
