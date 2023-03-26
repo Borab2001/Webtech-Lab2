@@ -4,6 +4,7 @@ function validateMyForm() {
   const birthday = document.getElementById("birthday").value;
   const gender = document.querySelector('input[name="gender"]:checked');
 
+  // Checks if there are any blank fields and points it out on an alert
   if (!firstName || !lastName || !birthday || !gender) {
       let message = "";
       if (!firstName) {
@@ -22,7 +23,7 @@ function validateMyForm() {
       return false;
   }
 
-  // If all fields are filled out, display an alert with the form summary
+  // If all fields are filled out, displays an alert with the form summary
   const summary = `First Name: ${firstName}\nLast Name: ${lastName}\nBirthday: ${birthday}\nGender: ${gender.value}`;
   alert(summary);
 
